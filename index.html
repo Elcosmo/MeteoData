@@ -3,63 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meteo Data</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
-        }
-        .loading {
-            color: gray;
-            font-size: 1.2em;
-        }
-        .error {
-            color: red;
-            font-size: 1.2em;
-        }
-    </style>
+    <title>Meteo Samarate</title>
 </head>
 <body>
     <h1>Meteo Samarate</h1>
-    <div id="weather-data" class="loading">Caricamento dati...</div>
-
+    <div id="weather">
+        <p>Caricamento dati...</p>
+    </div>
     <script>
-        // URL del sito Google Sites
-        const googleSitesUrl = "https://sites.google.com/view/meteosama/home-page";
+        const apiKey = "473713e0d019c6b40b0f68942200b873";
+        const city = "Samarate";
 
         async function fetchWeatherData() {
-            const weatherContainer = document.getElementById("weather-data");
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
             try {
-                // Effettua una richiesta GET al sito Google Sites
-                const response = await fetch(googleSitesUrl);
+                const response = await fetch(url);
                 if (!response.ok) {
-                    throw new Error(`Errore HTTP: ${response.status}`);
+                    throw new Error("Errore nella richiesta API");
                 }
-
-                // Ottieni il contenuto della pagina
-                const text = await response.text();
-
-                // Elabora i dati con un DOM parser per estrarre i dati meteo
-                const parser = new DOMParser();
-                const doc = parser.parseFromString(text, "text/html");
-
-                // Esempio: estrai tutti i paragrafi
-                const paragraphs = doc.querySelectorAll("p");
-                let weatherHtml = "";
-                paragraphs.forEach(p => {
-                    weatherHtml += `<p>${p.textContent}</p>`;
-                });
-
-                // Mostra i dati nella pagina
-                weatherContainer.innerHTML = weatherHtml;
+                const data = await response.json();
+                document.getElementById('weather').innerHTML = `
+                    <p>Città: ${data.name}</p>
+                    <p>Temperatura: ${data.main.temp}°C</p>
+                    <p>Descrizione: ${data.weather[0].description}</p>
+                    <p>Umidità: ${data.main.humidity}%</p>
+                    <p>Velocità del vento: ${data.wind.speed} m/s</p>
+                `;
             } catch (error) {
-                weatherContainer.innerHTML = `<div class="error">Errore durante il caricamento dei dati: ${error.message}</div>`;
-                console.error("Errore:", error);
+                document.getElementById('weather').innerHTML = `<p>Errore nel caricamento dei dati: ${error.message}</p>`;
             }
         }
 
-        // Recupera i dati meteo al caricamento della pagina
         fetchWeatherData();
     </script>
 </body>
