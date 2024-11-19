@@ -1,0 +1,1 @@
+https://api.openweathermap.org/data/2.5/weather?q=Samarate&appid=473713e0d019c6b40b0f68942200b873&units=metric
