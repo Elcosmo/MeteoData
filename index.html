@@ -18,10 +18,13 @@
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
             try {
                 const response = await fetch(url);
+                console.log("Stato della risposta:", response.status);
+                console.log("Headers:", response.headers);
                 if (!response.ok) {
-                    throw new Error("Errore nella richiesta API");
+                    throw new Error(`Errore nella richiesta API: ${response.statusText}`);
                 }
                 const data = await response.json();
+                console.log("Dati ricevuti:", data);
                 document.getElementById('weather').innerHTML = `
                     <p>Città: ${data.name}</p>
                     <p>Temperatura: ${data.main.temp}°C</p>
@@ -30,9 +33,11 @@
                     <p>Velocità del vento: ${data.wind.speed} m/s</p>
                 `;
             } catch (error) {
+                console.error("Errore dettagliato:", error);
                 document.getElementById('weather').innerHTML = `<p>Errore nel caricamento dei dati: ${error.message}</p>`;
             }
         }
+
 
         fetchWeatherData();
     </script>
