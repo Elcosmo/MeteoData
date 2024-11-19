@@ -1,0 +1,15 @@
+{
+    "name": "Samarate",
+    "main": {
+        "temp": 15.5,
+        "humidity": 80
+    },
+    "weather": [
+        {
+            "description": "clear sky"
+        }
+    ],
+    "wind": {
+        "speed": 5.5
+    }
+}
