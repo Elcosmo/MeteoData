@@ -3,51 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meteo Samarate</title>
+    <title>Meteo Data</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            text-align: center;
             margin: 20px;
+            line-height: 1.6;
+        }
+        .loading {
+            color: gray;
+            font-size: 1.2em;
+        }
+        .error {
+            color: red;
+            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
     <h1>Meteo Samarate</h1>
-    <div id="weather-info">
-        <p id="city-name">Caricamento dati...</p>
-        <p id="temperature"></p>
-        <p id="humidity"></p>
-        <p id="description"></p>
-        <p id="wind-speed"></p>
-        <p id="error" style="color: red;"></p>
-    </div>
+    <div id="weather-data" class="loading">Caricamento dati...</div>
 
     <script>
-        async function fetchWeather() {
+        // URL del sito Google Sites
+        const googleSitesUrl = "https://sites.google.com/view/meteosama/home-page";
+
+        async function fetchWeatherData() {
+            const weatherContainer = document.getElementById("weather-data");
             try {
-                const response = await fetch('https://raw.githubusercontent.com/elcosmo/MeteoData/main/weather.json');
-                
+                // Effettua una richiesta GET al sito Google Sites
+                const response = await fetch(googleSitesUrl);
                 if (!response.ok) {
-                    throw new Error(`HTTP error! Status: ${response.status}`);
+                    throw new Error(`Errore HTTP: ${response.status}`);
                 }
 
-                const data = await response.json();
+                // Ottieni il contenuto della pagina
+                const text = await response.text();
 
-                // Aggiorna i dati nella pagina
-                document.getElementById('city-name').textContent = `City: ${data.name}`;
-                document.getElementById('temperature').textContent = `Temperature: ${data.main.temp}°C`;
-                document.getElementById('humidity').textContent = `Humidity: ${data.main.humidity}%`;
-                document.getElementById('description').textContent = `Description: ${data.weather[0].description}`;
-                document.getElementById('wind-speed').textContent = `Wind Speed: ${data.wind.speed} m/s`;
+                // Elabora i dati con un DOM parser per estrarre i dati meteo
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(text, "text/html");
+
+                // Esempio: estrai tutti i paragrafi
+                const paragraphs = doc.querySelectorAll("p");
+                let weatherHtml = "";
+                paragraphs.forEach(p => {
+                    weatherHtml += `<p>${p.textContent}</p>`;
+                });
+
+                // Mostra i dati nella pagina
+                weatherContainer.innerHTML = weatherHtml;
             } catch (error) {
-                console.error('Error fetching weather data:', error);
-                document.getElementById('error').textContent = 'Failed to load weather data.';
+                weatherContainer.innerHTML = `<div class="error">Errore durante il caricamento dei dati: ${error.message}</div>`;
+                console.error("Errore:", error);
             }
         }
 
-        // Chiama la funzione per recuperare i dati
-        fetchWeather();
+        // Recupera i dati meteo al caricamento della pagina
+        fetchWeatherData();
     </script>
 </body>
 </html>
