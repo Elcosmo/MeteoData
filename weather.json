@@ -1,19 +1,20 @@
 {
-  "last_updated": "2024-11-19T12:00:33.825Z",
+  "last_updated": "2024-11-19T14:32:42.944Z",
   "current": {
     "city": "Samarate",
-    "date": "11/19/2024, 1:00:33 PM",
-    "temperature": "9.77?C",
-    "feels_like": "9.56?C",
-    "pressure": "1010 hPa",
+    "date": "11/19/2024, 3:32:42 PM",
+    "temperature": "9.36?C",
+    "feels_like": "8.02?C",
+    "pressure": "1008 hPa",
     "humidity": "84%",
-    "min_temperature": "8.27?C",
-    "max_temperature": "10.94?C",
-    "wind_speed": "1.34 m/s",
-    "wind_direction": "155?",
-    "visibility": "7 km",
+    "min_temperature": "8.14?C",
+    "max_temperature": "10.49?C",
+    "wind_speed": "2.57 m/s",
+    "wind_direction": "200?",
+    "visibility": "6 km",
     "cloudiness": "75%",
-    "weather_description": "broken clouds"
+    "weather_description": "mist",
+    "weather_id": 701
   },
   "forecast": [
     {
@@ -25,7 +26,8 @@
       "wind_speed": "2.52",
       "wind_direction": "295.75",
       "cloudiness": "79.63",
-      "weather": "overcast clouds"
+      "weather": "overcast clouds",
+      "weather_id": 804
     },
     {
       "date": "2024-11-21",
@@ -36,7 +38,8 @@
       "wind_speed": "1.72",
       "wind_direction": "134.13",
       "cloudiness": "62.63",
-      "weather": "snow"
+      "weather": "snow",
+      "weather_id": 601
     },
     {
       "date": "2024-11-22",
@@ -47,7 +50,8 @@
       "wind_speed": "3.43",
       "wind_direction": "338.00",
       "cloudiness": "34.88",
-      "weather": "clear sky"
+      "weather": "clear sky",
+      "weather_id": 800
     },
     {
       "date": "2024-11-23",
@@ -58,7 +62,8 @@
       "wind_speed": "1.80",
       "wind_direction": "318.38",
       "cloudiness": "38.00",
-      "weather": "clear sky"
+      "weather": "clear sky",
+      "weather_id": 800
     },
     {
       "date": "2024-11-24",
@@ -69,7 +74,8 @@
       "wind_speed": "1.47",
       "wind_direction": "340.60",
       "cloudiness": "86.60",
-      "weather": "overcast clouds"
+      "weather": "overcast clouds",
+      "weather_id": 804
     }
   ]
 }
