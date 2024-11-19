@@ -1,47 +1,75 @@
 {
-  "coord": {
-    "lon": 8.7834,
-    "lat": 45.6254
+  "last_updated": "2024-11-19T12:00:33.825Z",
+  "current": {
+    "city": "Samarate",
+    "date": "11/19/2024, 1:00:33 PM",
+    "temperature": "9.77?C",
+    "feels_like": "9.56?C",
+    "pressure": "1010 hPa",
+    "humidity": "84%",
+    "min_temperature": "8.27?C",
+    "max_temperature": "10.94?C",
+    "wind_speed": "1.34 m/s",
+    "wind_direction": "155?",
+    "visibility": "7 km",
+    "cloudiness": "75%",
+    "weather_description": "broken clouds"
   },
-  "weather": [
+  "forecast": [
     {
-      "id": 803,
-      "main": "Clouds",
-      "description": "broken clouds",
-      "icon": "04d"
+      "date": "2024-11-20",
+      "average_temperature": "8.44",
+      "feels_like": "7.33",
+      "pressure": "999.38",
+      "humidity": "54.88",
+      "wind_speed": "2.52",
+      "wind_direction": "295.75",
+      "cloudiness": "79.63",
+      "weather": "overcast clouds"
+    },
+    {
+      "date": "2024-11-21",
+      "average_temperature": "4.79",
+      "feels_like": "3.45",
+      "pressure": "1006.13",
+      "humidity": "58.50",
+      "wind_speed": "1.72",
+      "wind_direction": "134.13",
+      "cloudiness": "62.63",
+      "weather": "snow"
+    },
+    {
+      "date": "2024-11-22",
+      "average_temperature": "3.52",
+      "feels_like": "0.73",
+      "pressure": "1002.50",
+      "humidity": "59.75",
+      "wind_speed": "3.43",
+      "wind_direction": "338.00",
+      "cloudiness": "34.88",
+      "weather": "clear sky"
+    },
+    {
+      "date": "2024-11-23",
+      "average_temperature": "2.69",
+      "feels_like": "1.00",
+      "pressure": "1025.63",
+      "humidity": "51.50",
+      "wind_speed": "1.80",
+      "wind_direction": "318.38",
+      "cloudiness": "38.00",
+      "weather": "clear sky"
+    },
+    {
+      "date": "2024-11-24",
+      "average_temperature": "3.19",
+      "feels_like": "1.76",
+      "pressure": "1033.80",
+      "humidity": "51.20",
+      "wind_speed": "1.47",
+      "wind_direction": "340.60",
+      "cloudiness": "86.60",
+      "weather": "overcast clouds"
     }
-  ],
-  "base": "stations",
-  "main": {
-    "temp": 9.77,
-    "feels_like": 9.56,
-    "temp_min": 8.27,
-    "temp_max": 10.94,
-    "pressure": 1010,
-    "humidity": 84,
-    "sea_level": 1010,
-    "grnd_level": 983
-  },
-  "visibility": 7000,
-  "wind": {
-    "speed": 1.34,
-    "deg": 155,
-    "gust": 2.24
-  },
-  "clouds": {
-    "all": 75
-  },
-  "dt": 1732017175,
-  "sys": {
-    "type": 1,
-    "id": 6734,
-    "country": "IT",
-    "sunrise": 1731997814,
-    "sunset": 1732031444
-  },
-  "timezone": 3600,
-  "id": 3168599,
-  "name": "Samarate",
-  "cod": 200,
-  "last_updated": "2024-11-19T11:52:55.040Z"
+  ]
 }
