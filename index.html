@@ -15,7 +15,7 @@
         const city = "Samarate";
 
         async function fetchWeatherData() {
-            const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+            const url = `https://api.openweathermap.org/data/2.5/weather?q=Samarate&appid=473713e0d019c6b40b0f68942200b873&units=metric`;
             try {
                 const response = await fetch(url);
                 console.log("Stato della risposta:", response.status);
