@@ -1,0 +1,2 @@
+Ultimo aggiornamento: %DATE %TIME
+Messaggio: %antext
