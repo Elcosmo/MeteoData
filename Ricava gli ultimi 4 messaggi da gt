@@ -1,0 +1,106 @@
+function updateMensaJson() {
+  const channelUrl = "https://t.me/s/mensacascinacosta"; // URL del canale Telegram
+  const githubRepo = "MeteoData"; // Nome della tua repository
+  const githubOwner = "Elcosmo"; // Nome dell'owner della repository
+  const githubFilePath = "Mensa.json"; // Percorso del file nella repository
+  const githubToken = "Sostituisci con il tuo token GitHub"; // 
+
+  // Fase 1: Scraping del canale Telegram
+  const html = UrlFetchApp.fetch(channelUrl).getContentText(); // Recupera l'HTML della pagina
+  const lastMessages = extractLastMessages(html, 4); // Estrai gli ultimi 4 messaggi
+
+  // Fase 2: Creazione del JSON
+  const jsonArray = lastMessages.map(message => ({
+    id: message.id,
+    last_updated: new Date().toISOString(),
+    message: message.text
+  }));
+
+  const jsonContent = Utilities.base64Encode(JSON.stringify(jsonArray, null, 2)); // Codifica in Base64
+
+  // Fase 3: Aggiornamento su GitHub
+  const githubApiUrl = `https://api.github.com/repos/${githubOwner}/${githubRepo}/contents/${githubFilePath}`;
+  const currentFile = getCurrentFileSha(githubApiUrl, githubToken);
+  const updatePayload = {
+    message: "Aggiornamento Mensa.json",
+    content: jsonContent,
+    sha: currentFile.sha, // SHA corrente del file
+  };
+
+  const options = {
+    method: "PUT",
+    contentType: "application/json",
+    payload: JSON.stringify(updatePayload),
+    headers: {
+      Authorization: `Bearer ${githubToken}`,
+      Accept: "application/vnd.github+json",
+    },
+  };
+
+  const response = UrlFetchApp.fetch(githubApiUrl, options);
+  Logger.log("Aggiornamento completato: " + response.getContentText());
+}
+
+// Funzione per estrarre gli ultimi N messaggi dal contenuto HTML
+function extractLastMessages(html, count) {
+  const regex = /<div class="tgme_widget_message_text js-message_text" dir="auto">(.*?)<\/div>/g;
+  const matches = [];
+  let match;
+
+  // Cerca tutti i messaggi
+  while ((match = regex.exec(html)) !== null) {
+    const messageText = match[1]
+      .replace(/<[^>]+>/g, "") // Rimuove i tag HTML
+      .trim();
+    matches.push(messageText);
+  }
+
+  // Prendi solo gli ultimi N messaggi
+  const recentMessages = matches.slice(-count);
+
+  // Aggiungi numerazione ai messaggi
+  return recentMessages.map((message, index) => ({
+    id: index + 1, // Numerazione da 1 a N
+    text: message,
+  }));
+}
+
+// Funzione per ottenere la SHA del file corrente su GitHub
+function getCurrentFileSha(apiUrl, token) {
+  const options = {
+    method: "GET",
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: "application/vnd.github+json",
+    },
+  };
+
+  const response = UrlFetchApp.fetch(apiUrl, options);
+  const fileData = JSON.parse(response.getContentText());
+
+  return {
+    sha: fileData.sha,
+    content: fileData.content,
+  };
+}
+
+function createDailyTriggers() {
+  // Cancella tutti i trigger esistenti
+  const allTriggers = ScriptApp.getProjectTriggers();
+  allTriggers.forEach(trigger => ScriptApp.deleteTrigger(trigger));
+
+  // Imposta il fuso orario su Roma
+  const timeZone = "Europe/Rome";
+
+  // Crea i trigger
+  [9, 11, 12].forEach(hour => {
+    ScriptApp.newTrigger("updateMensaJson")
+      .timeBased()
+      .atHour(hour)
+      .inTimezone(timeZone)
+      .everyDays(1)
+      .create();
+  });
+
+  Logger.log("Trigger impostati per le 9:00, 11:00 e 12:00 ora di Roma.");
+}
