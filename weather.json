@@ -1,43 +1,31 @@
 {
-  "last_updated": "2024-11-29T23:49:38.393Z",
+  "last_updated": "2024-11-30T02:49:38.431Z",
   "current": {
     "city": "Samarate",
-    "date": "11/30/2024, 12:49:38 AM",
-    "temperature": "4.98?C",
-    "feels_like": "3.87?C",
+    "date": "11/30/2024, 3:49:38 AM",
+    "temperature": "4.13?C",
+    "feels_like": "2.29?C",
     "pressure": "1029 hPa",
-    "humidity": "94%",
-    "min_temperature": "3.71?C",
-    "max_temperature": "5.99?C",
-    "wind_speed": "1.54 m/s",
-    "wind_direction": "300?",
-    "visibility": "0.1 km",
+    "humidity": "95%",
+    "min_temperature": "2.99?C",
+    "max_temperature": "5.07?C",
+    "wind_speed": "2.06 m/s",
+    "wind_direction": "360?",
+    "visibility": "0.5 km",
     "cloudiness": "100%",
     "weather_description": "fog",
     "weather_id": 741
   },
   "forecast": [
     {
-      "date": "2024-11-30",
-      "average_temperature": "6.38",
-      "feels_like": "5.98",
-      "pressure": "1030.13",
-      "humidity": "71.00",
-      "wind_speed": "1.16",
-      "wind_direction": "160.75",
-      "cloudiness": "45.63",
-      "weather": "few clouds",
-      "weather_id": 801
-    },
-    {
       "date": "2024-12-01",
-      "average_temperature": "5.98",
-      "feels_like": "5.59",
-      "pressure": "1027.13",
-      "humidity": "61.38",
-      "wind_speed": "1.11",
-      "wind_direction": "317.38",
-      "cloudiness": "5.13",
+      "average_temperature": "6.00",
+      "feels_like": "5.62",
+      "pressure": "1027.00",
+      "humidity": "60.50",
+      "wind_speed": "1.10",
+      "wind_direction": "315.63",
+      "cloudiness": "8.13",
       "weather": "clear sky",
       "weather_id": 800
     },
@@ -76,6 +64,18 @@
       "cloudiness": "71.75",
       "weather": "overcast clouds",
       "weather_id": 804
+    },
+    {
+      "date": "2024-12-05",
+      "average_temperature": "4.27",
+      "feels_like": "4.27",
+      "pressure": "1025.00",
+      "humidity": "61.00",
+      "wind_speed": "1.18",
+      "wind_direction": "360.00",
+      "cloudiness": "16.00",
+      "weather": "few clouds",
+      "weather_id": 801
     }
   ]
 }
