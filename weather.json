@@ -1,33 +1,33 @@
 {
-  "last_updated": "2024-12-18T02:49:38.358Z",
+  "last_updated": "2024-12-18T05:49:38.642Z",
   "current": {
     "city": "Samarate",
-    "date": "12/18/2024, 3:49:38 AM",
-    "temperature": "3.86?C",
-    "feels_like": "2.59?C",
-    "pressure": "1029 hPa",
-    "humidity": "89%",
+    "date": "12/18/2024, 6:49:38 AM",
+    "temperature": "4.03?C",
+    "feels_like": "1.69?C",
+    "pressure": "1028 hPa",
+    "humidity": "92%",
     "min_temperature": "2.99?C",
     "max_temperature": "6.04?C",
-    "wind_speed": "1.54 m/s",
-    "wind_direction": "20?",
+    "wind_speed": "2.57 m/s",
+    "wind_direction": "30?",
     "visibility": "10 km",
-    "cloudiness": "0%",
-    "weather_description": "clear sky",
-    "weather_id": 800
+    "cloudiness": "40%",
+    "weather_description": "scattered clouds",
+    "weather_id": 802
   },
   "forecast": [
     {
       "date": "2024-12-19",
-      "average_temperature": "5.78",
-      "feels_like": "5.62",
+      "average_temperature": "6.18",
+      "feels_like": "6.07",
       "pressure": "1015.50",
-      "humidity": "85.50",
-      "wind_speed": "0.84",
-      "wind_direction": "149.63",
-      "cloudiness": "79.25",
-      "weather": "light rain",
-      "weather_id": 500
+      "humidity": "85.13",
+      "wind_speed": "0.85",
+      "wind_direction": "145.63",
+      "cloudiness": "94.25",
+      "weather": "overcast clouds",
+      "weather_id": 804
     },
     {
       "date": "2024-12-20",
@@ -67,15 +67,15 @@
     },
     {
       "date": "2024-12-23",
-      "average_temperature": "4.13",
-      "feels_like": "1.81",
-      "pressure": "1007.00",
-      "humidity": "71.00",
-      "wind_speed": "2.57",
-      "wind_direction": "342.00",
-      "cloudiness": "60.00",
-      "weather": "broken clouds",
-      "weather_id": 803
+      "average_temperature": "4.99",
+      "feels_like": "1.73",
+      "pressure": "1008.50",
+      "humidity": "55.50",
+      "wind_speed": "4.71",
+      "wind_direction": "174.00",
+      "cloudiness": "30.00",
+      "weather": "clear sky",
+      "weather_id": 800
     }
   ]
 }
