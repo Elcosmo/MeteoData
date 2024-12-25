@@ -1,16 +1,16 @@
 {
-  "last_updated": "2024-12-25T14:49:38.490Z",
+  "last_updated": "2024-12-25T17:49:42.378Z",
   "current": {
     "city": "Samarate",
-    "date": "12/25/2024, 3:49:38 PM",
-    "temperature": "10.99?C",
-    "feels_like": "8.8?C",
-    "pressure": "1031 hPa",
-    "humidity": "25%",
-    "min_temperature": "10.99?C",
-    "max_temperature": "10.99?C",
-    "wind_speed": "1.54 m/s",
-    "wind_direction": "120?",
+    "date": "12/25/2024, 6:49:42 PM",
+    "temperature": "2.56?C",
+    "feels_like": "2.56?C",
+    "pressure": "1032 hPa",
+    "humidity": "57%",
+    "min_temperature": "1.9?C",
+    "max_temperature": "3.55?C",
+    "wind_speed": "1.03 m/s",
+    "wind_direction": "0?",
     "visibility": "10 km",
     "cloudiness": "0%",
     "weather_description": "clear sky",
@@ -19,13 +19,13 @@
   "forecast": [
     {
       "date": "2024-12-26",
-      "average_temperature": "3.89",
-      "feels_like": "3.40",
+      "average_temperature": "3.88",
+      "feels_like": "3.39",
       "pressure": "1033.75",
-      "humidity": "46.50",
+      "humidity": "47.00",
       "wind_speed": "1.02",
       "wind_direction": "225.50",
-      "cloudiness": "3.13",
+      "cloudiness": "2.88",
       "weather": "clear sky",
       "weather_id": 800
     },
@@ -67,15 +67,15 @@
     },
     {
       "date": "2024-12-30",
-      "average_temperature": "4.18",
-      "feels_like": "4.18",
+      "average_temperature": "4.62",
+      "feels_like": "4.62",
       "pressure": "1029.00",
-      "humidity": "58.80",
-      "wind_speed": "0.74",
-      "wind_direction": "186.00",
-      "cloudiness": "15.20",
-      "weather": "clear sky",
-      "weather_id": 800
+      "humidity": "56.83",
+      "wind_speed": "0.72",
+      "wind_direction": "193.83",
+      "cloudiness": "19.83",
+      "weather": "scattered clouds",
+      "weather_id": 802
     }
   ]
 }
