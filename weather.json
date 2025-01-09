@@ -1,20 +1,20 @@
 {
-  "last_updated": "2025-01-09T08:49:38.141Z",
+  "last_updated": "2025-01-09T11:49:38.299Z",
   "current": {
     "city": "Samarate",
-    "date": "1/9/2025, 9:49:38 AM",
-    "temperature": "5.84?C",
-    "feels_like": "5.84?C",
+    "date": "1/9/2025, 12:49:38 PM",
+    "temperature": "6.76?C",
+    "feels_like": "5.91?C",
     "pressure": "1010 hPa",
-    "humidity": "94%",
-    "min_temperature": "5.06?C",
-    "max_temperature": "6.46?C",
-    "wind_speed": "1.03 m/s",
-    "wind_direction": "360?",
+    "humidity": "93%",
+    "min_temperature": "5.92?C",
+    "max_temperature": "7.12?C",
+    "wind_speed": "1.54 m/s",
+    "wind_direction": "300?",
     "visibility": "10 km",
-    "cloudiness": "100%",
-    "weather_description": "overcast clouds",
-    "weather_id": 804
+    "cloudiness": "75%",
+    "weather_description": "broken clouds",
+    "weather_id": 803
   },
   "forecast": [
     {
@@ -67,13 +67,13 @@
     },
     {
       "date": "2025-01-14",
-      "average_temperature": "0.07",
-      "feels_like": "0.07",
-      "pressure": "1036.33",
-      "humidity": "49.00",
-      "wind_speed": "1.17",
-      "wind_direction": "223.33",
-      "cloudiness": "10.00",
+      "average_temperature": "0.37",
+      "feels_like": "0.37",
+      "pressure": "1036.50",
+      "humidity": "47.25",
+      "wind_speed": "1.03",
+      "wind_direction": "251.50",
+      "cloudiness": "8.25",
       "weather": "clear sky",
       "weather_id": 800
     }
