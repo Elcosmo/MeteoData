@@ -1,33 +1,33 @@
 {
-  "last_updated": "2025-05-23T19:49:38.606Z",
+  "last_updated": "2025-05-23T22:49:38.369Z",
   "current": {
     "city": "Samarate",
-    "date": "5/23/2025, 9:49:38 PM",
-    "temperature": "15.02?C",
-    "feels_like": "14.59?C",
-    "pressure": "1014 hPa",
-    "humidity": "77%",
-    "min_temperature": "14.81?C",
-    "max_temperature": "16.08?C",
-    "wind_speed": "3.09 m/s",
-    "wind_direction": "90?",
+    "date": "5/24/2025, 12:49:38 AM",
+    "temperature": "13.82?C",
+    "feels_like": "13.35?C",
+    "pressure": "1016 hPa",
+    "humidity": "80%",
+    "min_temperature": "12.99?C",
+    "max_temperature": "14.66?C",
+    "wind_speed": "3.6 m/s",
+    "wind_direction": "70?",
     "visibility": "10 km",
-    "cloudiness": "75%",
-    "weather_description": "broken clouds",
-    "weather_id": 803
+    "cloudiness": "40%",
+    "weather_description": "scattered clouds",
+    "weather_id": 802
   },
   "forecast": [
     {
       "date": "2025-05-24",
-      "average_temperature": "17.31",
-      "feels_like": "16.81",
-      "pressure": "1016.13",
-      "humidity": "65.63",
+      "average_temperature": "17.12",
+      "feels_like": "16.59",
+      "pressure": "1016.38",
+      "humidity": "65.25",
       "wind_speed": "1.44",
       "wind_direction": "139.13",
-      "cloudiness": "69.63",
-      "weather": "overcast clouds",
-      "weather_id": 804
+      "cloudiness": "60.50",
+      "weather": "broken clouds",
+      "weather_id": 803
     },
     {
       "date": "2025-05-25",
@@ -67,15 +67,15 @@
     },
     {
       "date": "2025-05-28",
-      "average_temperature": "19.73",
-      "feels_like": "19.41",
-      "pressure": "1020.00",
-      "humidity": "63.43",
-      "wind_speed": "1.58",
-      "wind_direction": "225.71",
-      "cloudiness": "83.43",
-      "weather": "broken clouds",
-      "weather_id": 803
+      "average_temperature": "19.62",
+      "feels_like": "19.35",
+      "pressure": "1019.63",
+      "humidity": "65.63",
+      "wind_speed": "1.57",
+      "wind_direction": "236.00",
+      "cloudiness": "83.63",
+      "weather": "overcast clouds",
+      "weather_id": 804
     }
   ]
 }
